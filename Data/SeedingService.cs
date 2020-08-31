@@ -29,7 +29,11 @@ namespace SalesWebMvc.Data
             Department d3 = new Department("Fashion");
             Department d4 = new Department("Books");
 
+            Seller s1 = new Seller("Adriana", "adriana@uol.br", new DateTime(1972,12,30), 10000.0, d1);
+            Seller s2 = new Seller("Erika", "erika@uol.br", new DateTime(1982, 04, 29), 8000.0, d3);
+
             _context.Department.AddRange(d1, d2, d3, d4);
+            _context.Seller.AddRange(s1, s2);
 
             _context.SaveChanges();
         }
